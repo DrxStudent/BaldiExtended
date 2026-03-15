@@ -29,7 +29,7 @@ public class HuggingScript : MonoBehaviour
 	{
 		if (this.inBsoda)
 		{
-			this.rb.velocity = this.otherVelocity;
+			this.rb.linearVelocity = this.otherVelocity;
 		}
 	}
 
@@ -39,7 +39,7 @@ public class HuggingScript : MonoBehaviour
 		if (other.transform.name == "1st Prize")
 		{
 			this.inBsoda = true;
-			this.otherVelocity = this.rb.velocity * 0.1f + other.GetComponent<NavMeshAgent>().velocity;
+			this.otherVelocity = this.rb.linearVelocity * 0.1f + other.GetComponent<NavMeshAgent>().velocity;
 			this.failSave = 1f;
 		}
 	}

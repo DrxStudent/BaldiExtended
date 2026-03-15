@@ -20,7 +20,7 @@ public class Balloon : MonoBehaviour
         while (this.directionTime > 0f)
         {
             this.directionTime -= Time.deltaTime;
-            this.rb.velocity = this.direction * this.speed;
+            this.rb.linearVelocity = this.direction * this.speed;
             yield return null;
         }
         
@@ -32,7 +32,7 @@ public class Balloon : MonoBehaviour
         while (this.directionTime > 0f)
         {
             this.directionTime -= Time.deltaTime;
-            this.rb.velocity = this.direction * this.speed;
+            this.rb.linearVelocity = this.direction * this.speed;
             yield return null;
         }
 

@@ -56,7 +56,7 @@ public class ProjectilePickupScript : MonoBehaviour
         
         if (this.isThrown)
         {
-            this.rb.velocity = transform.forward * 120f;
+            this.rb.linearVelocity = transform.forward * 120f;
         
             this.lifetime -= Time.deltaTime;
             if (this.lifetime < 0f)

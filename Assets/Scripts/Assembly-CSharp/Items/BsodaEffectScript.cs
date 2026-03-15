@@ -34,7 +34,7 @@ public class BsodaEffectScript : MonoBehaviour
 		if (other.tag == "BSODA") //If its a BSODA
 		{
 			this.inBsoda = true;
-			this.otherVelocity = other.GetComponent<Rigidbody>().velocity; // Set the velocity to the velocity of the BSODA
+			this.otherVelocity = other.GetComponent<Rigidbody>().linearVelocity; // Set the velocity to the velocity of the BSODA
 			this.failSave = 1f;
 		}
 		else if (other.transform.name == "Gotta Sweep") //If its Gotta Sweep

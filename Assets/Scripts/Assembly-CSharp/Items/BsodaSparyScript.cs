@@ -5,7 +5,7 @@ public class BsodaSparyScript : MonoBehaviour
 	private void Start()
 	{
 		this.rb = base.GetComponent<Rigidbody>(); //Get the RigidBody
-		this.rb.velocity = base.transform.forward * this.speed; //Move forward
+		this.rb.linearVelocity = base.transform.forward * this.speed; //Move forward
 		if (this.gameObject.name == "DietBSODA_Spray(Clone)") //Set the lifespan
 		{
 			this.sprite.sprite = this.cyanSpray;
@@ -20,7 +20,7 @@ public class BsodaSparyScript : MonoBehaviour
 
 	private void Update()
 	{
-		this.rb.velocity = base.transform.forward * this.speed; //Move forward
+		this.rb.linearVelocity = base.transform.forward * this.speed; //Move forward
 		this.lifeSpan -= Time.deltaTime; // Decrease the lifespan variable
 		if (this.lifeSpan < 0f) //When the lifespan timer ends, destroy the BSODA
 		{
