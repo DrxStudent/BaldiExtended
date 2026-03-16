@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour
 			this.sensitivityActive = true;
 		
 		this.mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity");
+		print(mouseSensitivity);
+		mouseSensitivity = 10;
 		
 		this.height = base.transform.position.y;
 		this.stamina = this.maxStamina;
